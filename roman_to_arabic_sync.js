@@ -1,4 +1,5 @@
 'use strict'
+
 const fs = require('fs')
 const data = fs.readFileSync('values.txt', 'utf-8')
 const dataArray = data.split('\n')

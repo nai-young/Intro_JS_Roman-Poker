@@ -26,9 +26,11 @@ function toRoman (num) {
   let key
 
   if (typeof num === 'string') {
+    // de Romanos a Arábigos
     arabic = 0
     const RomanToArabic = num.split('')
 
+    // validación de numeros romanos repetidos
     const isValid = () => {
       return !RomanToArabic.some((char) => (
         RomanToArabic.filter((ch) => ch === char).length > limit
@@ -48,6 +50,7 @@ function toRoman (num) {
       return 'Error, a Roman number repeats more than 3 times.'
     }
   } else {
+    // de Arábigos a Romanos
     if (num < 1 || num > 3999) {
       return 'Enter a valid number between 1 - 3999'
     } else {
@@ -62,7 +65,7 @@ function toRoman (num) {
   }
 }
 
-// Add external file values
+// para pasar array de datos a la función por parámetro
 let finalResult = ''
 dataArray.map(number => {
   const romanToNumber = parseInt(number)
@@ -74,4 +77,6 @@ dataArray.map(number => {
     finalResult += result + '\n'
   }
 })
+
+// escribir resultado convertido en archivo externo
 fs.writeFileSync('roman_numbers_result.txt', 'Result: ' + '\n' + finalResult)

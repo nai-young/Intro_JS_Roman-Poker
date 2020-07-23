@@ -1,0 +1,13 @@
+Result: 
+21
+DCCC
+XLIII
+5
+510
+DCCLXV
+2011
+MMXX
+7
+210
+Enter a valid number between 1 - 3999
+Error, a Roman number repeats more than 3 times.

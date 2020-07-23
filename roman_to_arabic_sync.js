@@ -1,7 +1,7 @@
 'use strict'
 
 const fs = require('fs')
-const data = fs.readFileSync('values.txt', 'utf-8')
+const data = fs.readFileSync('values_to_convert.txt', 'utf-8')
 const dataArray = data.split('\n')
 
 function toRoman (num) {
@@ -34,7 +34,7 @@ function toRoman (num) {
         RomanToArabic.filter((ch) => ch === char).length > limit
       ))
     }
-    console.log(isValid(RomanToArabic))
+
     if (isValid(RomanToArabic) === true) {
       RomanToArabic.map(value => {
         for (const romanNum in romanList) {
